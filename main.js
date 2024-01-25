@@ -111,11 +111,8 @@ function findSmallest(arr, returnType) {
 // console.log(findSmallest(arr, 'index')); 
 
       function smallestEvenMultiple(n) {
-          if (n%2==0) {
-            return n
-          } else {
-            return n * 2
-          }
+        return n % 2 == 0 ? n : n * 2;
       }
 
 console.log(smallestEvenMultiple(2,4,3,5));
+
