@@ -114,5 +114,102 @@ function findSmallest(arr, returnType) {
         return n % 2 == 0 ? n : n * 2;
       }
 
-console.log(smallestEvenMultiple(2,4,3,5));
+// console.log(smallestEvenMultiple(2,4,3,5));
 
+
+   let array = [1,55,45,85,115,2,66]
+
+   let max = array[0]
+   for (let index = 1; index < array.length; index++) {
+    if (array[index] > max) 
+        max = array[index];
+   }
+  
+
+// console.log(max);
+
+function findMax(...rest) {
+  let max = rest[0]
+  for (let index = 1; index < rest.length; index++) {
+   if (rest[index] > max) 
+       max = rest[index];
+  }
+  return max
+}
+
+// console.log(findMax(1,55,45,85,115,2,66));
+
+var isPalindrome = function(x) {
+  if(x<0) return false;
+  let str = x+'';
+  function reverse(value){
+      let quantity = ''
+      for( let i = value.length - 1; i >= 0; i-- ){
+         quantity += value[i]
+      }
+      return quantity
+  }
+  return x == reverse(str)
+
+};
+
+// console.log(isPalindrome(658));
+
+var numberOfSteps = function(num) {
+  let count = 0
+  while(num>0){
+    num--
+    console.log(num);
+  }
+
+};
+
+numberOfSteps(5)
+
+// how much i love u 
+
+function howMuchILoveYou(nbPetals) {
+  const phrase = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all']
+  return phrase[(nbPetals -1)%phrase.length]
+}
+
+
+// array reverse
+
+function fixTheMeerkat(arr) {
+  return arr.reverse()
+ }
+
+ // return masked string
+function maskify(str) {
+  if (str.length <= 4) {
+      return str;
+  } else {
+      const maskedLength = str.length - 4;
+      const maskedPart = '#'.repeat(maskedLength);
+      const lastFourCharacters = str.slice(-4);
+      return maskedPart + lastFourCharacters;
+  }
+}
+
+
+// return masked string
+function maskify(str) {
+  if (str.length <= 4)  return str;
+let newstr = ''
+for (let i = 0; i < str.length; i++){
+  if(i<str.length-4) newstr += '#'
+  else newstr += str[i]
+}
+return newstr
+}
+
+
+function countCorrectCharacters(correctWord, guess){
+  if(correctWord.length !== guess.length) throw new Error();
+  let count = 0;
+  for(let i = 0; i < correctWord.length; i++){
+    if(correctWord[i] === guess[i]) count++ 
+  }
+  return count
+}
