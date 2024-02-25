@@ -213,3 +213,51 @@ function countCorrectCharacters(correctWord, guess){
   }
   return count
 }
+
+
+// indexOf method in strings 
+
+function customIndexOf(string, substring) {
+  for (let i = 0; i <= string.length - substring.length; i++) {
+      let match = true;
+      for (let j = 0; j < substring.length; j++) {
+          if (string[i + j] !== substring[j]) {
+              match = false;
+              break;
+          }
+      }
+      if (match) {
+          return i;
+      }
+  }
+  return -1;
+}
+
+let string = 'My name is Feera'
+let substring = 'is'
+console.log(customIndexOf(string, substring));
+
+
+// lastIndexOf in strings
+function customLastIndexOf(string, substring) {
+  for (let i = string.length - substring.length; i >= 0; i--) {
+      let match = true;
+      for (let j = 0; j < substring.length; j++) {
+          if (string[i + j] !== substring[j]) {
+              match = false;
+              break;
+          }
+      }
+      if (match) {
+          return i;
+      }
+  }
+  return -1;
+}
+
+let str = "My name is Feera";
+let substr = "e";gi
+console.log(customLastIndexOf(str, substr));
+
+
+
